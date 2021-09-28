@@ -14,7 +14,7 @@ const CompCallbackMemo = ({ id }) => {
   const request = useCallback(() => getPlanet(id), [id]);
 
   const { data, loading, error } = useRequest(request);
-  // const data = usePlanetInfo(id);
+
   if (error) {
     return <div>Error</div>;
   }

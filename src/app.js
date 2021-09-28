@@ -8,6 +8,7 @@ import ComponentContext from './components/component-context';
 import { LangContext } from './contexts';
 import ComponentStateEffect from './components/component-state-effect';
 import CompCallbackMemo from './components/comp-callback-memo';
+import CompReducer from './components/comp-reducer';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <ComponentContext />
         <ComponentStateEffect />
         <CompCallbackMemo id="5" />
+        <CompReducer initialCount={10} />
       </div>
     </LangContext.Provider>
   );
