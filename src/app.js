@@ -7,6 +7,7 @@ import PlanetInfo from './components/planet-info';
 import ComponentContext from './components/component-context';
 import { LangContext } from './contexts';
 import ComponentStateEffect from './components/component-state-effect';
+import CompCallbackMemo from './components/comp-callback-memo';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <PlanetInfo id="5" />
         <ComponentContext />
         <ComponentStateEffect />
+        <CompCallbackMemo id="5" />
       </div>
     </LangContext.Provider>
   );

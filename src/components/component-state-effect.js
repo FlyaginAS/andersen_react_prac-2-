@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
 const ComponentStateEffect = () => {
-  const [color, setColor] = useState('black');
+  const [color, setColor] = useState('grey');
   const [val, setVal] = useState(0);
 
-  //вообще сравнение с мжц не совсем корректно, но можно провести
+  //вообще сравнение с мжц не совсем корректно, но можно провести.
   //аналог componentDidMount
   useEffect(() => {
     console.log('componentDidMount');
@@ -25,7 +25,7 @@ const ComponentStateEffect = () => {
     console.log('componentDidMount & update');
   }, [val, color]);
 
-  //аналог componentDidUnmount в чистом не применяется-подписались/отписались
+  //аналог componentWillUnmount в чистом не применяется-подписались/отписались
   // useEffect(() => () => console.log('чистый анмаутинг'),[]);
 
   const style = {
