@@ -4,6 +4,7 @@ const ComponentStateEffect = () => {
   const [color, setColor] = useState('black');
   const [val, setVal] = useState(0);
 
+  //вообще сравнение с мжц не совсем корректно, но можно провести
   //аналог componentDidMount
   useEffect(() => {
     console.log('componentDidMount');
@@ -19,13 +20,13 @@ const ComponentStateEffect = () => {
   //аналог componentDidUpdate но срабатывает и на монтировании
   //допустим хотим срабатывание и на val и на color
   //но вообще хуки позволяют не привязываться к жизненным циклам
-  // и разделять логику так как нам удобно
+  // хуки-когда определенная логика зависит от отпределенных данных
   useEffect(() => {
     console.log('componentDidMount & update');
   }, [val, color]);
 
   //аналог componentDidUnmount в чистом не применяется-подписались/отписались
-  // useEffect(() => () => console.log('чистый анмаутинг'));
+  // useEffect(() => () => console.log('чистый анмаутинг'),[]);
 
   const style = {
     padding: '10px',
