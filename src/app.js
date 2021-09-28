@@ -6,6 +6,7 @@ import UnorderedList from './renderProp/unordered-list';
 import PlanetInfo from './components/planet-info';
 import ComponentContext from './components/component-context';
 import { LangContext } from './contexts';
+import ComponentStateEffect from './components/component-state-effect';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <List>{(items) => <UnorderedList items={items} />}</List>
         <PlanetInfo id="5" />
         <ComponentContext />
+        <ComponentStateEffect />
       </div>
     </LangContext.Provider>
   );
