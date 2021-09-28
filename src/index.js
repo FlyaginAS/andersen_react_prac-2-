@@ -6,7 +6,7 @@ console.log('hello');
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App propForHoc1="one" propForHoc2="two" />
   </React.StrictMode>,
   document.getElementById('root')
 );
